@@ -28,7 +28,16 @@ Exêmplo:
   puts b // "Teste"
 ```
 
-## 
+# Metodos Úteis
+
+## Conversão de Classes
+_No ruby temos um método para converter a classe de algo. Podemos converter uma variável para String, Integer e Float usando os métodos to_[classe]_
+Exêmplos:
+```
+  a = "1"
+  a.to_i // Transforma a variável a em uma String
+  a.to_f // Transforma a variável a em um Float
+```
 
 ### Nil
 _Nil é um valor que representa o nada absoluto._
