@@ -53,6 +53,20 @@ Exemplo:
     puts "Número: #{[variável] [condição]}
   end
 ```
+### each
+_O each é um método de array que passa por todos os itens dela e faz algo cada vez que passar. Como parâmetro você passa a variável, que será a correspondente ao ítem onde o loop se encontra no momento._
+Exemplo:
+```rb
+  lista = ["abc", "def", "ghi"]
+  contagem = 0
+
+  lista.each do |item| # Passa por todos os ítems de "lista" e ,para cada item, mostra o ítem onde o loop se encontra no momento e adiciona 1 ao contador
+      puts item
+      contagem += 1
+  end
+
+  puts contagem
+```
 
 # Metodos Úteis
 
