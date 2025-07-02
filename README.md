@@ -29,7 +29,6 @@ Exemplo:
 ```
 
 ## Loops
-_Aqui estão os 2 loops mais usados: **while** e **for**_
 ### while
 _A sintaxe do **while** é bem simples. Basta colocar a condição no loop que o que está dentro dele irá acontecer enquanto a condição não for verdadeira._
 Exemplo:
@@ -45,6 +44,14 @@ _No for é um pouco mais complicado. O primeiro argumento será a variável do l
     puts numero
   end
   # Recomendo que teste para entender melhor
+```
+### times
+_O times é lembra um pouco o for. Porém nele você coloca a variável do loop em cima e o que acontece com ela no própio código._
+Exemplo:
+```rb
+  3.times do |[variável]|
+    puts "Número: #{[variável] [condição]}
+  end
 ```
 
 # Metodos Úteis
