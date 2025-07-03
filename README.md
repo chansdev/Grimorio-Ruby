@@ -68,7 +68,18 @@ Exemplo:
   puts contagem
 ```
 
-# Metodos Úteis
+# Métodos
+## Array
+### reject
+_O metodo reject retorna a array sem os componentes que condizem com a condição desejada. Basta nomear a variável transitora e definir a condição._
+Exemplo:
+```rb
+  lista = [1, 2, 3, 4, 5, 6]
+
+  lista.reject { |numero| numero > 3 } # Nomeia a variável transitora como numero e "rejeita" os numeros maiores que 3
+```
+
+# Métodos gerais
 
 ## Conversão de Classes
 _No ruby temos um método para converter a classe de algo. Podemos converter uma variável para String, Integer e Float usando os métodos to_[classe]_
@@ -78,6 +89,3 @@ Exêmplos:
   a.to_i # Transforma a variável a em uma String
   a.to_f # Transforma a variável a em um Float
 ```
-
-### Nil
-_Nil é um valor que representa o nada absoluto._
