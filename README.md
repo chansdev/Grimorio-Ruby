@@ -71,8 +71,22 @@ Hash é basicamente um objeto do JavaScript. Uma lista não ordenada, onde você
 pessoa = { nome: "Heitor", idade: 16, profissão: "Fullstack" }
 ```
 
+## Métodos
+### Adicionar e atualizar valores
+Para adicionar valores basta definir 
+
+### each
+O each no Hash é um pouco diferente. Nele você adicionará dois parâmetros ao invés de 1. O primeiro sendo a chave e o outro sendo o valor.
+**Exemplo**:
+```rb
+pessoa = { nome: "Heitor", cidade: "Recife" }
+pessoa.each do |chave, valor|
+    puts "#{chave}: #{valor}"
+end
+```
+
 # Loops
-Os loops são uma forma mais pratica de fazer uma mesma ação várias vezes
+Os loops são uma forma mais pratica de fazer uma mesma ação várias vezes.
 
 ## while
 A sintaxe do **while** é bem simples. Basta colocar a condição no loop que o que está dentro dele irá acontecer enquanto a condição não for verdadeira.
