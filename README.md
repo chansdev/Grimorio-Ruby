@@ -79,6 +79,21 @@ Exemplo:
   lista.reject { |numero| numero > 3 } # Nomeia a variável transitora como numero e "rejeita" os numeros maiores que 3
 ```
 
+### inspect
+_O método inspect mostra a array de modo "puro"_
+Exemplo:
+```rb
+lista = [1, 2, 3, 4, 5, 6]
+lista.inspect # [1, 2, 3, 4, 5, 6]
+```
+### pop
+_O método pop retira o último ítem da array_
+```rb
+lista = [1, 2, 3, 4, 5, 6]
+lista.pop()
+lista.inspect # [1, 2, 3, 4, 5]
+```
+
 # Métodos gerais
 
 ## Conversão de Classes
