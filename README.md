@@ -39,11 +39,21 @@ texto = "Esse é um texto"
 
 ## Métodos
 ### capitalize
-O método capitalize é um método que pega o primeiro caractere e, se ele estiver em caixa baixa, transforma em caixa alta  
+O método capitalize é um método que pega o primeiro caractere e, se ele estiver em caixa baixa, transforma em caixa alta.  
 **Exemplo**:
 ```rb
 texto = "teste"
 puts texto.capitalize # "Teste"
+```
+
+### rjust e ljust
+Esses métodos pegam uma string e fazem ela ter o tamanho desejado adicionando caracteres vazios. O rjust adiciona os carateres na esquerda e o ljust adiciona os caracteres na direita.  
+**Exemplo**:
+```rb
+texto = "teste"
+puts texto.rjust(10) # "     Teste"
+
+puts texto.ljust(10) # "Teste     "
 ```
 
 # Array
@@ -70,6 +80,7 @@ O método inspect mostra a array de modo "puro"
 lista = [1, 2, 3, 4, 5, 6]
 lista.inspect # [1, 2, 3, 4, 5, 6]
 ```
+
 ### pop
 O método pop retira o último ítem da array  
 **Exemplo**:
