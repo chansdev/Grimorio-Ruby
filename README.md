@@ -31,7 +31,7 @@ As variáveis são definidas de forma simples, sem ser necessário a definição
 ```
 
 # String
-String é basicamente um conjunto de caracteres que formam um texto  
+String é basicamente uma classe de variável que guarda um conjunto de caracteres, formando um texto.  
 **Exemplo**:
 ```rb
 texto = "Esse é um texto"
@@ -56,8 +56,24 @@ puts texto.rjust(10) # "     Teste"
 puts texto.ljust(10) # "Teste     "
 ```
 
+# Integer
+O integer é uma classe de variável que guarda um número inteiro.  
+**Exemplo**:
+```rb
+numero_inteiro = 3
+```
+
+## Métodos
+### even? e odd?
+Esses métodos são usados para indentificar se um Integer é par ou ímpar. even? retorna **true** se o Integer for par e odd? retorna true se for ímpar.  
+**Exemplo**:
+```rb
+puts 2.even? # true
+puts 3.odd? # true
+```
+
 # Array
-Array é basicamente uma lista ordenada  
+Array é basicamente uma classe de variável que armazena uma lista ordenada  
 **Exemplo**:
 ```rb
 lista = [1, 2, 3, 4, 5, 6]
