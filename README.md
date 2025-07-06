@@ -46,6 +46,16 @@ texto = "teste"
 puts texto.capitalize # "Teste"
 ```
 
+### upcase
+O método upcase retorna a string com todos os seus caracteres em caixa alta.  
+**Exemplo**:
+```rb
+texto = "teste"
+puts texto.upcase # "TESTE"
+```
+
+### strip, lstrip e rstrip 
+
 ### rjust e ljust
 Esses métodos pegam uma string e fazem ela ter o tamanho desejado adicionando caracteres vazios. O rjust adiciona os carateres na esquerda e o ljust adiciona os caracteres na direita.  
 **Exemplo**:
@@ -200,6 +210,16 @@ puts texto.length # 26
 
 array = [1, 2, 3, 4, 5, 6, 7]
 puts array.size # 7
+```
+
+## index
+O index é um método onde você passa um valor e ele retorna a posição dele na variável em questão.  
+**Exemplo**:  
+Usando para verificar onde se encontra a palavra "galera" em uma String.  
+_OBS: Por estar passando uma palavra inteira como argumento ele retorna a posição da primeira letra._
+```rb
+teste = "Olá galera do canal"
+puts teste.index("galera")
 ```
 
 ## to_s, to_i e to_f
