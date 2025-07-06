@@ -55,9 +55,27 @@ puts texto.upcase # "TESTE"
 ```
 
 ### strip, lstrip e rstrip 
+Esses métodos servem para retirar os espaços vazios que tem ao redor de uma String. Sendo o **lstrip** para remover os da esquerda, o **rstrip** os da direita e o **strip** para remover dos dois lados.  
+_OBS: Essa remoção ocorre a partir do último, primeiro ou ambos dependendo de qual você usou._  
+**Exemplo**:
+```rb
+texto = "        Esse é um texto exemplo         "
+puts texto.lstrip # "Esse é um texto exemplo         "
+puts texto.rstrip # "        Esse é um texto exemplo"
+puts texto.lstrip # "Esse é um texto exemplo"
+```
+
+### delete_prefix e delete_suffix
+Esses métodos retornam a String sem o conteúdo, do início ou final, passado como argumento dependendo de qual você usar. Sendo delete_prefix para o inicio e delete_suffix para o final.  
+```rb
+texto = "Esse é um texto exemplo"
+puts texto.delete_prefix("Esse") # " é um texto exemplo"
+puts texto.delete_suffix("exemplo") # "Esse é um texto "
+```
 
 ### rjust e ljust
-Esses métodos pegam uma string e fazem ela ter o tamanho desejado adicionando caracteres vazios. O rjust adiciona os carateres na esquerda e o ljust adiciona os caracteres na direita.  
+Esses métodos pegam uma String e fazem ela ter o tamanho desejado adicionando os caracteres que você passou. O **rjust** adiciona os carateres na esquerda e o **ljust** adiciona os caracteres na direita.  
+_OBS: Quando você não passa nenhum caractere como argumento ele adiciona caracteres vazios._  
 **Exemplo**:
 ```rb
 texto = "teste"
@@ -191,12 +209,22 @@ puts array.empty? # true
 ```
 
 ### include?
-Esse método indica se uma variável contém um conteúdo selecionado.  
+Esse método indica se uma variável contém um conteúdo passado.  
 **Exemplo**:  
 Usando em uma Array de frutas para verificar se ela contém a fruta maçã.
 ```rb
 frutas = ["banana", "uva", "pêra"]
 puts frutas.include?("maçã") # false
+```
+
+### start_with? e end_with?
+Esses métodos retornam se uma variável começa, ou acaba, com um conteúdo que você passou.  
+**Exemplo**:
+Usando para verificar se uma String começa com "Esse" e se termina com "exemoplo", passando isso como argumento.
+```rb
+texto = "Esse é um texto exemplo"
+puts texto.start_with?("Esse") # true
+puts texto.end_with?("exemplo") # true
 ```
 
 ## size ou length
@@ -223,7 +251,7 @@ puts teste.index("galera")
 ```
 
 ## to_s, to_i e to_f
-No ruby temos um método para converter a classe de algo. Podemos converter uma variável para String, Integer e Float usando os métodos to_[classe]  
+No ruby temos um método para converter a classe de algo. Podemos converter uma variável para String, Integer e Float usando os métodos to_s,to_i e to_f.  
 **Exemplos**:
 Usando para transformar uma String em um Integer e um Float
 ```rb
