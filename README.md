@@ -21,7 +21,7 @@ O ruby apresenta, assim como no JavaScript, uma função que disponibiliza diver
   Math.sqrt(a) # 5
 ```
 
-## Variáveis
+# Variáveis
 As variáveis são definidas de forma simples, sem ser necessário a definição do tipo da variável. Basta nomear e relacionar o valor.  
 **Exemplo**:
 ```rb
@@ -30,15 +30,16 @@ As variáveis são definidas de forma simples, sem ser necessário a definição
   puts b # "Teste"
 ```
 
-# String
+## String
 String é basicamente uma classe de variável que guarda um conjunto de caracteres, formando um texto.  
 **Exemplo**:
 ```rb
 texto = "Esse é um texto"
 ```
 
-## Métodos
-### capitalize
+### Métodos
+***
+#### CAPITALIZE
 O método capitalize é um método que pega o primeiro caractere e, se ele estiver em caixa baixa, transforma em caixa alta.  
 **Exemplo**:
 ```rb
@@ -46,7 +47,7 @@ texto = "teste"
 puts texto.capitalize # "Teste"
 ```
 
-### upcase
+#### UPCASE
 O método upcase retorna a string com todos os seus caracteres em caixa alta.  
 **Exemplo**:
 ```rb
@@ -54,7 +55,7 @@ texto = "teste"
 puts texto.upcase # "TESTE"
 ```
 
-### strip, lstrip e rstrip 
+#### STRIP, LSTRIP E RSTRIP 
 Esses métodos servem para retirar os espaços vazios que tem ao redor de uma String. Sendo o **lstrip** para remover os da esquerda, o **rstrip** os da direita e o **strip** para remover dos dois lados.  
 _OBS: Essa remoção ocorre a partir do último, primeiro ou ambos dependendo de qual você usou._  
 **Exemplo**:
@@ -62,98 +63,113 @@ _OBS: Essa remoção ocorre a partir do último, primeiro ou ambos dependendo de
 texto = "        Esse é um texto exemplo         "
 puts texto.lstrip # "Esse é um texto exemplo         "
 puts texto.rstrip # "        Esse é um texto exemplo"
-puts texto.lstrip # "Esse é um texto exemplo"
+puts texto.strip  # "Esse é um texto exemplo"
 ```
 
-### delete_prefix e delete_suffix
-Esses métodos retornam a String sem o conteúdo, do início ou final, passado como argumento dependendo de qual você usar. Sendo delete_prefix para o inicio e delete_suffix para o final.  
+#### DELETE_PREFIX E DELETE_SUFFIX
+Esses métodos retornam a String sem o conteúdo, do início ou final, passado como argumento dependendo de qual você usar. Sendo delete_prefix para o início e delete_suffix para o final.  
 ```rb
 texto = "Esse é um texto exemplo"
 puts texto.delete_prefix("Esse") # " é um texto exemplo"
 puts texto.delete_suffix("exemplo") # "Esse é um texto "
 ```
 
-### rjust e ljust
-Esses métodos pegam uma String e fazem ela ter o tamanho desejado adicionando os caracteres que você passou. O **rjust** adiciona os carateres na esquerda e o **ljust** adiciona os caracteres na direita.  
+#### RJUST E LJUST
+Esses métodos pegam uma String e fazem ela ter o tamanho desejado adicionando os caracteres que você passou. O **rjust** adiciona os caracteres na esquerda e o **ljust** adiciona os caracteres na direita.  
 _OBS: Quando você não passa nenhum caractere como argumento ele adiciona caracteres vazios._  
 **Exemplo**:
 ```rb
 texto = "teste"
-puts texto.rjust(10) # "     Teste"
-
-puts texto.ljust(10) # "Teste     "
+puts texto.rjust(10) # "     teste"
+puts texto.ljust(10) # "teste     "
 ```
 
-# Integer
-O integer é uma classe de variável que guarda um número inteiro.  
+## Integer
+O Integer é uma classe de variável que guarda um número inteiro.  
 **Exemplo**:
 ```rb
 numero_inteiro = 3
 ```
 
-## Métodos
-### even? e odd?
-Esses métodos são usados para indentificar se um Integer é par ou ímpar. even? retorna **true** se o Integer for par e odd? retorna true se for ímpar.  
+### Métodos
+___
+#### EVEN? E ODD?
+Esses métodos são usados para identificar se um Integer é par ou ímpar. `even?` retorna **true** se o Integer for par e `odd?` retorna **true** se for ímpar.  
 **Exemplo**:
 ```rb
 puts 2.even? # true
-puts 3.odd? # true
+puts 3.odd?  # true
 ```
 
-# Array
-Array é basicamente uma classe de variável que armazena uma lista ordenada  
+## Array
+Array é basicamente uma classe de variável que armazena uma lista ordenada.  
 **Exemplo**:
 ```rb
 lista = [1, 2, 3, 4, 5, 6]
 ```
 
-## Métodos
-### reject
-O metodo reject retorna a array sem os componentes que condizem com a condição desejada. Basta nomear a variável transitora e definir a condição.  
-**Exemplo**:
-```rb
-  lista = [1, 2, 3, 4, 5, 6]
-
-  lista.reject { |numero| numero > 3 } # Nomeia a variável transitora como numero e "rejeita" os numeros maiores que 3
-```
-
-### inspect
-O método inspect mostra a array de modo "puro"  
+### Métodos
+#### JOIN
+O métpdo `join` retorna todos os ítens interceptados por o que você desejar.  
 **Exemplo**:
 ```rb
 lista = [1, 2, 3, 4, 5, 6]
-lista.inspect # [1, 2, 3, 4, 5, 6]
+
+puts lista.join(", ") # 1, 2, 3, 4, 5, 6
 ```
 
-### pop
-O método pop retira o último ítem da array  
+#### REJECT
+O método `reject` retorna o array sem os elementos que satisfazem a condição definida no bloco.  
 **Exemplo**:
 ```rb
 lista = [1, 2, 3, 4, 5, 6]
-lista.pop()
-lista.inspect # [1, 2, 3, 4, 5]
+lista.reject { |numero| numero > 3 }
+# Retorna: [1, 2, 3]
 ```
 
-# Hash
-Hash é basicamente um objeto do JavaScript. Uma lista não ordenada, onde você requisita o valor pelo nome e não pelo índice.  
+#### INSPECT
+O método `inspect` mostra a array de modo "puro" (forma legível e representativa).  
+**Exemplo**:
+```rb
+lista = [1, 2, 3, 4, 5, 6]
+puts lista.inspect # [1, 2, 3, 4, 5, 6]
+```
+
+#### POP
+O método `pop` retira o último item da array.  
+**Exemplo**:
+```rb
+lista = [1, 2, 3, 4, 5, 6]
+lista.pop
+puts lista.inspect # [1, 2, 3, 4, 5]
+```
+
+## Hash
+Hash é basicamente um objeto como no JavaScript. Uma lista não ordenada, onde você acessa os valores por chave e não por índice.  
 **Exemplo:**
 ```rb
 pessoa = { nome: "Heitor", idade: 16, profissão: "Fullstack" }
 ```
 
-## Métodos
-### Adicionar e atualizar valores
-Para adicionar valores basta definir 
+### Métodos
+#### ADICIONAR E ATUALIZAR VALORES
+Para adicionar ou atualizar valores em um hash, basta usar a chave com o operador `=`.  
+**Exemplo:**
+```rb
+pessoa[:cidade] = "Recife"
+pessoa[:idade] = 17
+```
 
-### each
-O each no Hash é um pouco diferente. Nele você adicionará dois parâmetros ao invés de 1. O primeiro sendo a chave e o outro sendo o valor.  
+#### EACH
+O `each` em hashes usa dois parâmetros: a chave e o valor.  
 **Exemplo**:
 ```rb
 pessoa = { nome: "Heitor", cidade: "Recife" }
 pessoa.each do |chave, valor|
-    puts "#{chave}: #{valor}"
+  puts "#{chave}: #{valor}"
 end
 ```
+
 
 # Loops
 Os loops são uma forma mais pratica de fazer uma mesma ação várias vezes.
