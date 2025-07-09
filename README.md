@@ -144,6 +144,14 @@ lista.pop
 puts lista.inspect # [1, 2, 3, 4, 5]
 ```
 
+#### PUSH
+O método `push` coloca algo na posição final da array.
+```rb
+lista = [1, 2, 3, 4, 5, 6]
+lista.push(8)
+puts lista.inspect # [1, 2, 3, 4, 5, 6, 8]
+```
+
 ## Hash
 Hash é basicamente um objeto como no JavaScript. Uma lista não ordenada, onde você acessa os valores por chave e não por índice.  
 **Exemplo:**
